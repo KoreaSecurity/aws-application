@@ -52,4 +52,4 @@ production:
   database: sample_app
   username: sample_app
   password: <%= ENV['AWS_INTRO_SAMPLE_DATABASE_PASSWORD'] %>
-  host: db.home
+  host: <%= ENV['AWS_INTRO_SAMPLE_DATABASE_HOST'] %>
