@@ -54,8 +54,8 @@ group :development do
 end
 
 group :production do
-  # gem 'fog', '~> 1.42'
-  gem 'mini_racer', platforms: :ruby
+  gem 'fog', '~> 1.42'
+  # gem 'mini_racer', platforms: :ruby
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
