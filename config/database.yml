@@ -1,21 +1,25 @@
-default: &default
+development:
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
   socket: /tmp/mysql.sock
-
-development:
-  <<: *default
   database: sample_app_development
 
 test:
-  <<: *default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password:
+  socket: /tmp/mysql.sock
   database: sample_app_test
 
 production:
-  <<: *default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: sample_app
   username: sample_app
   password: <%= ENV['AWS_INTRO_SAMPLE_DATABASE_PASSWORD'] %>
